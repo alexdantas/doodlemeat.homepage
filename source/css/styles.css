@@ -3,6 +3,11 @@
  * This file overrides Bootstrap.
  */
 
+/* Don't like round border on Bootstrap's navbars */
+.navbar {
+	border-radius: 0;
+}
+
 /* Make that logo image expand to its full size! */
 img {
 	width:  100%;
@@ -29,26 +34,21 @@ table > tbody > tr > td:first-child {
 	box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);
 }
 
-
-/* The footer of the page, making it stick to the bottom */
-.navbar-fixed-bottom {
-	position: relative;
-
+/* Bootstrap Flatly theme's footer is invisible otherwise */
+.my-footer {
+	color: white;
 	font-size: 75%;
+
+	margin: 0;
 }
+
+/* Merely aligning the text on the footer */
 footer .pull-right {
 	text-align: right;
 }
 footer .pull-left {
 	text-align: left;
 }
-
-
-/* Bootstrap Flatly theme's footer is invisible otherwise */
-footer {
-	color: white;
-}
-
 
 /* These are styles specific to the "resume" page.
  * Instead of a lot of <strong> and <em> tags, its better
