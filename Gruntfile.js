@@ -68,7 +68,18 @@ module.exports = function(grunt) {
 		// Zips all final files from the site
 		// and places it on the output directory
 		zip: {
-			'doodlemeat.zip': ['output/**/*']
+			dist: {
+				cwd: 'output/',
+
+				src: ['output/**/*'],
+				dest: 'output/doodlemeat.zip'
+			}
+		},
+
+		// Makes sure to remove the zip before
+		// zipping, so it won't contain itself
+		clean: {
+			zip: ['output/doodlemeat.zip']
 		},
 
 		// Pushes all built files on a remote server
@@ -92,6 +103,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', ['jekyll:build']);
 	grunt.registerTask('preview', ['jekyll:serve']);
 	grunt.registerTask('check',   ['jekyll:build', 'validation', 'bootlint']);
-	grunt.registerTask('upload',  ['jekyll:build', 'zip', 'rsync:dist']);
+	grunt.registerTask('upload',  ['jekyll:build', 'clean:zip', 'zip:dist', 'rsync:dist']);
 };
 

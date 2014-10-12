@@ -10,4 +10,4 @@
 *.log
 validation-report.json
 validation-status.json
-
+*.zip

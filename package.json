@@ -17,6 +17,7 @@
 		"grunt-jekyll"           : "*",
 		"grunt-bootlint"         : "*",
 		"load-grunt-tasks"       : "*",
+		"grunt-contrib-clean"    : "*",
 		"grunt-html-validation"  : "*"
 	},
 
