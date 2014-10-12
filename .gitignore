@@ -1,8 +1,13 @@
+# Files ignored by Git!
 
-# Who would've known, right?
-Makefile
+# Final output, site completely built.
+/output/
 
-doodlemeat.zip
+# Local libraries installed by `npm`
+/node_modules/
 
-node_modules
+# Random files that sometimes appear
+*.log
+validation-report.json
+validation-status.json
 

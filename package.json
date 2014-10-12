@@ -1,0 +1,27 @@
+
+{
+	"name"    : "doodlemeat.homepage",
+	"version" : "0.0.1",
+
+	"description" : "Homepage for Anthon 'doodlemeat' Fredriksson",
+
+	"repository" : "https://github.com/alexdantas/doodlemeat.homepage",
+	"author"     : "Alexandre Dantas",
+
+	"devDependencies": {
+		"grunt"                  : "~0.4.1",
+		"grunt-zip"              : "*",
+		"grunt-exec"             : "*",
+		"time-grunt"             : "*",
+		"grunt-rsync"		     : "~0.6.2",
+		"grunt-jekyll"           : "*",
+		"grunt-bootlint"         : "*",
+		"load-grunt-tasks"       : "*",
+		"grunt-html-validation"  : "*"
+	},
+
+	"engines": {
+		"npm": "1.2.x"
+	}
+}
+
