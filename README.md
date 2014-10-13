@@ -19,8 +19,8 @@ Here's a quick summary of the tools I use:
 
 | tool | what does it do |
 | ---- | --------------- |
-| grunt  | A "JavaScript Makefile"; it automates common tasks such as "copy this file here" or "upload finished site to server" |
-| jekyll | A static site generator; it takes several HTML files as input, joins them in order and spits the final website |
+| **grunt**  | A "JavaScript Makefile"; it automates common tasks such as "copy this file here" or "upload finished site to server" |
+| **jekyll** | A static site generator; it takes several HTML files as input, joins them in order and spits the final website |
 
 So if you want to modify this website, make sure you have installed
 the tools first. If you're _completely_ new to the terms above, please
@@ -113,10 +113,13 @@ Here's what every file and directory means and does:
 
 | file | description |
 | ---- | ----------- |
-| package.json  | Contains metadata for the website. Completely harmless, used by `npm` to install dependencies |
-| Gruntfile.js  | All the tasks for `grunt`, the "JavaScript Makefile" |
-| node_modules/ | Only gets created when you set up `npm`, contains all the locally installed libraries |
-| source/       | Whole source code for the website, contains all the `jekyll` project files |
+| `package.json`      | Contains metadata for the website. Completely harmless, used by `npm` to install dependencies |
+| `Gruntfile.js`      | All the tasks for `grunt`, the "JavaScript Makefile" |
+| `jekyll-config.yml` | Configuration file for `jekyll`, contains site-wide metadata values, such as title and description |
+| `node_modules/`     | Only gets created when you set up `npm`, contains all the locally installed libraries |
+| `source/`           | Whole source code for the website, contains all the `jekyll` project files |
+| `source/_includes`  | Partial html files that are included into others, for example the footer, or navbar |
+| `source/_layouts`   | General layouts for html files, so we don't have to type the same things over and over |
 
 [tutorial]:    http://24ways.org/2013/grunt-is-not-weird-and-hard/
 [npm]:         https://npmjs.org/
