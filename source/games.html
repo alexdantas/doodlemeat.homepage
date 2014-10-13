@@ -23,73 +23,21 @@ active: games
 
 <div class="games">
 
+	{% for game in site.data.games %}
 	<div class="game">
 		<div class="game-image">
 			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
 		</div>
 		<div class="game-title">
-			Mineralistic
+			<a href="{{ game.site }}" target="_blank">
+				{{ game.title }}
+			</a>
 		</div>
 		<div class="game-tagline">
-			Great game, hell yeah.
+			{{ game.description }}
 		</div>
 	</div>
-	<div class="game">
-		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
-		</div>
-		<div class="game-title">
-			Mineralistic2
-		</div>
-		<div class="game-tagline">
-			Great game, hell yeah.
-		</div>
-	</div>
-	<div class="game">
-		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
-		</div>
-		<div class="game-title">
-			Mineralistic3
-		</div>
-		<div class="game-tagline">
-			Great game, hell yeah.
-		</div>
-	</div>
-
-	<div class="game">
-		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
-		</div>
-		<div class="game-title">
-			Mineralistic4
-		</div>
-		<div class="game-tagline">
-			Great game, hell yeah.
-		</div>
-	</div>
-	<div class="game">
-		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
-		</div>
-		<div class="game-title">
-			Mineralistic5
-		</div>
-		<div class="game-tagline">
-			Great game, hell yeah.
-		</div>
-	</div>
-	<div class="game">
-		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
-		</div>
-		<div class="game-title">
-			Mineralistic6
-		</div>
-		<div class="game-tagline">
-			Great game, hell yeah.
-		</div>
-	</div>
+	{% endfor %}
 
 </div>
 
