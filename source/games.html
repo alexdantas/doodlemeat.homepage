@@ -11,20 +11,27 @@ active: games
 </p>
 
 <div class="masthead">
-    <ul class="nav nav-justified">
-        <li class="active"><a href="#">Any Language</a></li>
-        <li><a href="#">C</a></li>
-        <li><a href="#">C++</a></li>
-        <li><a href="#">Java</a></li>
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">Lua</a></li>
+    <ul class="nav nav-justified" data-filter-group="language">
+        <li class="active">
+			<a href="#" data-filter="*">
+				Any
+			</a>
+		</li>
+
+		{% for language in site.data.languages %}
+        <li>
+			<a href="#" data-filter=".{{ language | downcase | replace:'+','p' }}">
+				{{ language }}
+			</a>
+		</li>
+		{% endfor %}
     </ul>
 </div>
 
 <div class="games">
 
 	{% for game in site.data.games %}
-	<div class="game">
+	<div class="game {{ game.language | downcase | replace:'+','p' }}" data-popularity="{{ game.popularity }}">
 		<div class="game-image">
 			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
 		</div>
