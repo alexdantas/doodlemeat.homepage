@@ -1,5 +1,7 @@
 # Huge list of my games
-# Used on the `games` page
+#
+# Every time the site gets built, it uses this list
+# to populate the "games" page.
 
 - title:       "nsnake"
   language:    "C++"
