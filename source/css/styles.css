@@ -35,11 +35,10 @@ table > tbody > tr > td:first-child {
 }
 
 /* Bootstrap Flatly theme's footer is invisible otherwise */
-.my-footer {
-	color: white;
-	font-size: 75%;
-
-	margin: 0;
+footer {
+	color     : white;
+	font-size : 75%;
+	margin    : 0;
 }
 
 /* Merely aligning the text on the footer */
