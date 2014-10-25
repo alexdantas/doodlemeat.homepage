@@ -5,15 +5,15 @@
 
 # Single game description.
 # Use this same style for the others.
-- title:       "Melvind"
-  language:    "Javascript"
+- title   : "Melvind"
+  language: "Javascript"
 
   # Optional address for the game website.
   #site: ""
 
   # Mandatory number between 0 and 10
   # Used to arrange the order to show relative to other games.
-  popularity:  7
+  popularity:  3
 
   # Mandarotry small description shown on thumbnail
   tagline: "You play as a little dwarf called Melvind and you have to defend your beer cag from ketchup trolls."
@@ -37,10 +37,68 @@
   #
   pictures:
     - url:   http://i.imgur.com/YHrsLoW.png
-      title: Screenshot
-      alt:   alt
+      title: Gameplay
+      alt:   Gameplay
 
     - url:   http://i.imgur.com/ERJAnsM.png
-      title: Other Screenshot
-      alt:   Other alt
+      title: Title Screen
+      alt:   Title Screen
+
+- title   : "Terminal"
+  language: "C++"
+  #site: ""
+  popularity:  5
+  tagline: "You play as a criminal girl in where you have to escape an airport by avoiding guards and security cameras."
+  description: |
+    This game was made during and for a course at my university.
+    It was made in 10 weeks.
+    As for the programming language I used C++ and I worked in Visual Studio.
+
+    We were 5 people working at this, 1 designer, 1 programmer(me) and 3 artists.
+  pictures:
+    - url:   http://i.imgur.com/nFIRY5C.jpg
+      title: Title Screen
+      alt:   Title Screen
+
+    - url:   http://i.imgur.com/aLrh6NF.jpg
+      title: Gameplay
+      alt:   Gameplay
+
+- title   : "Totemic"
+  language: "C++"
+  #site: ""
+  popularity:  9
+  tagline: "This is a 2-4 player competitive party game in where you control 2 characters each to conquer the totem by defeating the other players."
+  description: |
+    It was made for a course called Theme Park out our university.
+
+    We attended an exhibition called GGC (_Gotland Game Conference_) and we came second place in student choice award.
+    After a roughly half year we attended _Dreamhack Open 2014_ with Totemic.
+
+  pictures:
+    - url:   http://i.imgur.com/OTCaM8i.jpg
+      title: Title Screen
+      alt:   Title Screen
+
+    - url:   http://i.imgur.com/jaMWLEM.jpg
+      title: Gameplay
+      alt:   Gameplay
+
+- title   : "Mineralistic"
+  language: "C++"
+  #site: ""
+  popularity:  9
+  tagline: "Infinite procedurally-generated 2D platformer."
+  description: |
+    This was made over the summer of 2014.
+    I applied everything I learned from the university in this game. It was just made for fun.
+
+    It features a man in a Borat bathsuit exploring a infinite generated dungeon. You can put up torches and swing in ropes and mine stone and minerals.
+
+    It is made in C++ written in Visual Studio.
+
+  pictures:
+    - url:   https://camo.githubusercontent.com/cae70ad5ae2f03a8e612c97e99c787e6f5a2bfd5/687474703a2f2f692e696d6775722e636f6d2f50385a4672546b2e706e67
+      title: Gameplay
+      alt:   Gameplay
 
