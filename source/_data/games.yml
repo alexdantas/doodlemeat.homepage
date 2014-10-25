@@ -3,18 +3,44 @@
 # Every time the site gets built, it uses this list
 # to populate the "games" page.
 
+# Single game description.
+# Use this same style for the others.
 - title:       "Melvind"
   language:    "Javascript"
-  site:        ""
+
+  # Optional address for the game website.
+  #site: ""
+
+  # Mandatory number between 0 and 10
+  # Used to arrange the order to show relative to other games.
   popularity:  7
-  tagline:     "You play as a little dwarf called Melvind and you have to defend your beer cag from ketchup trolls."
+
+  # Mandarotry small description shown on thumbnail
+  tagline: "You play as a little dwarf called Melvind and you have to defend your beer cag from ketchup trolls."
+
+  # Mandatory large description shown on the pop-up.
+  # You're free to use GitHub-flavored Markdown...!
   description: |
     This game was made at our universitys local game jam called _Gotland Game Jam_.
     It was made in under 48 hours. The code is written in Javascript.
 
     We was 4 people working at this distributed by 1 designer, 1 programmer(me) and 2 artists. I used a HTML 5 javascript game framework called [JawsJS](http://jawsjs.com/).
 
+  # This is an optional list of pictures:
+  #
+  # - If this is empty/doesn't exist, no thumbnail is shown
+  # - If this only has a single element, will show both
+  #   as thumbnail and on the full game description
+  # - If this has more than one element, the first one will
+  #   be the thumbnail and will make a slider of all images
+  #   on the main game description.
+  #
   pictures:
-    - http://i.imgur.com/YHrsLoW.png
-    - http://i.imgur.com/ERJAnsM.png
+    - url:   http://i.imgur.com/YHrsLoW.png
+      title: Screenshot
+      alt:   alt
+
+    - url:   http://i.imgur.com/ERJAnsM.png
+      title: Other Screenshot
+      alt:   Other alt
 

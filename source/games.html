@@ -73,8 +73,42 @@ active: games
 				</div>
 
 				<div class="modal-body">
-					<img class="img-responsive img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+					{% if game.pictures %}
+					<!-- Carousel - a big banner with all game images. It also works for a single image too -->
+					<div id="carousel-{{ game.title }}" class="carousel slide" data-ride="carousel">
 
+						<!-- Indicators (little balls on slider) -->
+						<ol class="carousel-indicators">
+							{% for picture in game.pictures %}
+							<li data-target="#carousel-{{ game.title }}"
+								data-slide-to="{{ forloop.index0 }}"
+								{% if forloop.first %} class="active" {% endif %}>
+							</li>
+							{% endfor %}
+						</ol>
+
+						<!-- The actual images -->
+						<div class="carousel-inner">
+							{% for picture in game.pictures %}
+							<div class="item {% if forloop.first %}active{% endif %}">
+								<img src="{{ picture.url }}" title="{{ picture.title }}" alt="{{ picture.alt }}" />
+							</div>
+							{% endfor %}
+						</div>
+
+						{% if game.pictures.size > 1 %}
+						<!-- The left and right arrows -->
+						<a class="left carousel-control" href="#carousel-{{ game.title }}" role="button" data-slide="prev">
+							<i class="fa fa-chevron-circle-left"></i>
+						</a>
+						<a class="right carousel-control" href="#carousel-{{ game.title }}" role="button" data-slide="next">
+							<i class="fa fa-chevron-circle-right"></i>
+						</a>
+						{% endif %}
+					</div>
+					{% endif %}
+
+					<!-- Main game description, aww yeah -->
 					<p>{{ game.description | markdownify }}</p>
 				</div>
 
