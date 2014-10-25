@@ -37,7 +37,9 @@ active: games
 		<div class="game-image">
 			<!-- This makes the game modal appear -->
 			<a href="#modal-{{ game.title }}" role="button" data-toggle="modal">
-				<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+				{% if game.pictures %}
+				<img class="img-rounded" src="{{ game.pictures.first.url }}" />
+				{% endif %}
 			</a>
 		</div>
 
