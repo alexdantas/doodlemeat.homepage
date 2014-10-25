@@ -60,31 +60,33 @@ active: games
 	<!-- These are the game Modals. They are revealed when clicking the game thumbnails. -->
 	{% for game in site.data.games %}
 	<div class="modal fade" id="modal-{{ game.title }}">
-		<div class="modal-content">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
 
-			<div class="modal-header">
-				<!-- Close button -->
-				<button type="button" class="close" data-dismiss="modal">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h4 class="modal-title">{{ game.title }}</h4>
-			</div>
+				<!-- Close button and title -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+					</button>
 
-			<div class="modal-body">
-				<img class="img-responsive img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+					<h4 class="modal-title">{{ game.title }}</h4>
+				</div>
 
-				<p>{{ game.description }}</p>
+				<div class="modal-body">
+					<img class="img-responsive img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
 
-			</div>
+					<p>{{ game.description | markdownify }}</p>
+				</div>
 
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-				{% if game.site %}
-				<a  href="{{ game.site }}" class="btn btn-primary" target="_blank">
-					Visit Website
-				</a>
-				{% endif %}
+					{% if game.site %}
+					<a  href="{{ game.site }}" class="btn btn-primary" target="_blank">
+						Visit Website
+					</a>
+					{% endif %}
+				</div>
 			</div>
 		</div>
 	</div>

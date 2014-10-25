@@ -8,10 +8,12 @@
   site:        ""
   popularity:  7
   tagline:     "You play as a little dwarf called Melvind and you have to defend your beer cag from ketchup trolls."
-  description: >-
-    This game was made at our universitys local game jam called Gotland Game Jam. It was made in under 48 hours.
-    The code is written in Javascript. We was 4 people working at this distributed by 1 designer, 1 programmer(me)
-    and 2 artists. I used a HTML 5 javascript game framework called <a href="http://jawsjs.com/">JawsJS</a>
+  description: |
+    This game was made at our universitys local game jam called _Gotland Game Jam_.
+    It was made in under 48 hours. The code is written in Javascript.
+
+    We was 4 people working at this distributed by 1 designer, 1 programmer(me) and 2 artists. I used a HTML 5 javascript game framework called [JawsJS](http://jawsjs.com/).
+
   pictures:
     - http://i.imgur.com/YHrsLoW.png
     - http://i.imgur.com/ERJAnsM.png
