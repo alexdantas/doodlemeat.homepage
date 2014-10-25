@@ -30,21 +30,64 @@ active: games
 
 <div class="games">
 
+	<!-- These are the game thumbnails. When clicked, they reveal the game Modals. -->
 	{% for game in site.data.games %}
 	<div class="game {{ game.language | downcase | replace:'+','p' }}" data-popularity="{{ game.popularity }}">
+
 		<div class="game-image">
-			<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+			<!-- This makes the game modal appear -->
+			<a href="#modal-{{ game.title }}" role="button" data-toggle="modal">
+				<img class="img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+			</a>
 		</div>
+
 		<div class="game-title">
-			<a href="{{ game.site }}" target="_blank">
+			<!-- Also make the game modal appear -->
+			<a href="#modal-{{ game.title }}" role="button" data-toggle="modal">
 				{{ game.title }}
 			</a>
 		</div>
+
 		<div class="game-tagline">
-			{{ game.description }}
+			{{ game.tagline }}
+		</div>
+
+	</div>
+	{% endfor %}
+</div>
+
+<div class="games-modals">
+	<!-- These are the game Modals. They are revealed when clicking the game thumbnails. -->
+	{% for game in site.data.games %}
+	<div class="modal fade" id="modal-{{ game.title }}">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<!-- Close button -->
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 class="modal-title">{{ game.title }}</h4>
+			</div>
+
+			<div class="modal-body">
+				<img class="img-responsive img-rounded" src="img/me.jpg" alt="Screenshot of the game" />
+
+				<p>{{ game.description }}</p>
+
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+				{% if game.site %}
+				<a  href="{{ game.site }}" class="btn btn-primary" target="_blank">
+					Visit Website
+				</a>
+				{% endif %}
+			</div>
 		</div>
 	</div>
 	{% endfor %}
-
 </div>
 
